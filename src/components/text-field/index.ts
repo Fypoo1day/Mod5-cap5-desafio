@@ -23,7 +23,8 @@ export function initTextFieldComp() {
               font-size: 18px;
               border:solid 2px;
               border-radius: 4px;
-              // padding: 17px 13px;
+               padding: 17px 13px;
+               width: 100%;
             }
         `;
 
