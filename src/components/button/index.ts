@@ -7,15 +7,16 @@ export function initButtonComp() {
         this.render();
       }
       render() {
-        const label = this.getAttribute("label");
+        const variant =
+          this.getAttribute("variant") || "start-button" || "back-button";
         var shadow = this.attachShadow({ mode: "open" });
         const button = document.createElement("button");
         const style = document.createElement("style");
 
-        button.className = "root";
+        button.className = variant;
 
         style.innerHTML = `
-            .root{
+            .start-button{
                 font-weight: bold;
                 font-size: 18px;
                 border:solid 2px;
@@ -24,6 +25,16 @@ export function initButtonComp() {
                 background-color:#9CBBE9;
                 width:100%;
             }
+
+            .back-button{
+              font-weight: bold;
+              font-size: 18px;
+              border:solid 2px;
+              border-radius: 4px;
+              padding: 17px 13px;
+              background-color:#E5E5E5;
+              width:100%;
+          }
           `;
 
         button.textContent = this.textContent;

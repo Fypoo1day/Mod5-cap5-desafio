@@ -461,9 +461,11 @@ var _textField = require("./components/text-field");
 var _index = require("./components/button/index");
 var _index1 = require("./components/header/index");
 var _index2 = require("./components/footer/index");
+var _selectField = require("./components/select-field/select-field");
 (function() {
     _text.initTextComp();
     _textField.initTextFieldComp();
+    _selectField.initSelectFieldComp();
     _index.initButtonComp();
     _index1.initHeader();
     _index2.initFooter();
@@ -471,7 +473,7 @@ var _index2 = require("./components/footer/index");
     _router.initRouter(root);
 })();
 
-},{"./router":"b2iia","./components/text":"8YEyP","./components/text-field":"l7C0L","./components/button/index":"3uBrB","./components/header/index":"1WBLn","./components/footer/index":"4nDUJ"}],"b2iia":[function(require,module,exports) {
+},{"./router":"b2iia","./components/text":"8YEyP","./components/text-field":"l7C0L","./components/button/index":"3uBrB","./components/header/index":"1WBLn","./components/footer/index":"4nDUJ","./components/select-field/select-field":"5DUXq"}],"b2iia":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "initRouter", ()=>initRouter
@@ -574,10 +576,7 @@ parcelHelpers.export(exports, "initStepOne", ()=>initStepOne
 );
 function initStepOne(params) {
     const div = document.createElement("div");
-    div.innerHTML = `\n    <h1>Página Step-1</h1>\n    `;
-    div.addEventListener("click", ()=>{
-        params.goTo("/b");
-    });
+    div.innerHTML = `\n    <header-comp class="Header"></header-comp>\n    <div class="container">\n      <custom-text variant="title" class="welcome">\n        Necesitamos algunos datos más\n      </custom-text>\n      <div class="welcome">\n        <text-field variant="one-choice" label="Email" ></text-field>\n      </div>\n      <div class="welcome">\n        <text-field variant="one-choice" label="Comida favorita" ></text-field>\n      </div>\n      <div class="welcome">\n        <text-field variant="multiple-choice" label="Alguna de estas tres opciones" ></text-field>\n      </div>\n      <div style="padding: 0px 20px">\n        <custom-button variant="start-button">Continuar</custom-button>\n      </div>\n      <div style="padding: 20px 20px;">\n        <custom-button variant="back-button">Volver</custom-button>\n      </div>\n    </div>\n    <footer-comp></footer-comp>\n    `;
     return div;
 }
 
@@ -661,14 +660,14 @@ function initButtonComp() {
             this.render();
         }
         render() {
-            const label = this.getAttribute("label");
+            const variant = this.getAttribute("variant") || "start-button";
             var shadow = this.attachShadow({
                 mode: "open"
             });
             const button = document.createElement("button");
             const style = document.createElement("style");
-            button.className = "root";
-            style.innerHTML = `\n            .root{\n                font-weight: bold;\n                font-size: 18px;\n                border:solid 2px;\n                border-radius: 4px;\n                padding: 17px 13px;\n                background-color:#9CBBE9;\n                width:100%;\n            }\n          `;
+            button.className = variant;
+            style.innerHTML = `\n            .start-button{\n                font-weight: bold;\n                font-size: 18px;\n                border:solid 2px;\n                border-radius: 4px;\n                padding: 17px 13px;\n                background-color:#9CBBE9;\n                width:100%;\n            }\n\n            .back-button{\n              font-weight: bold;\n              font-size: 18px;\n              border:solid 2px;\n              border-radius: 4px;\n              padding: 17px 13px;\n              background-color:#E5E5E5;\n              width:100%;\n          }\n          `;
             button.textContent = this.textContent;
             shadow.appendChild(button);
             shadow.appendChild(style);
@@ -728,6 +727,32 @@ function initFooter() {
         }
     }
     customElements.define("footer-comp", FooterComponent);
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5DUXq":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "initSelectFieldComp", ()=>initSelectFieldComp
+);
+function initSelectFieldComp() {
+    customElements.define("select-field", class extends HTMLElement {
+        constructor(){
+            super();
+            this.render();
+        }
+        render() {
+            const label = this.getAttribute("label");
+            var shadow = this.attachShadow({
+                mode: "open"
+            });
+            const div = document.createElement("div");
+            const style = document.createElement("style");
+            style.innerHTML = `\n            *{\n              box-sizing: border-box;\n              }  \n            .label{\n                display:block;\n              }\n            .option{\n                font-size: 18px;\n                border:solid 2px;\n                border-radius: 4px;\n                 padding: 17px 13px;\n                 width: 100%;\n              }\n          `;
+            div.innerHTML = `\n            <label for="select" class="label">\n              <custom-text variant="body">\n                ${label}\n              </custom-text>\n            </label>\n            <select class="label option">\n                <option class="option">Piedra</option>\n                <option class="option">Papel</option>\n                <option class="option">Tijera</option>\n              </select>\n          `;
+            shadow.appendChild(div);
+            shadow.appendChild(style);
+        }
+    });
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}]},["8uBhv","4aleK"], "4aleK", "parcelRequire955f")
