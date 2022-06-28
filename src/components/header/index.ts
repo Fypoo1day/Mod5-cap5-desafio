@@ -15,12 +15,14 @@ export function initHeader() {
 
       style.innerHTML = `
         .Header{
+          font-family: "Roboto";
+          font-weight: bold;
           width: 100%;
           height: 60px;
           background-color: #FF8282;
-          border: none;
-          margin: 0;
-          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           margin-bottom: 41px;
          }
       `;

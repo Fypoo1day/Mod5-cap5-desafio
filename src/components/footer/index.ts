@@ -15,13 +15,15 @@ export function initFooter() {
 
       style.innerHTML = `
           .Footer{
+            font-family: "Roboto";
+            font-weight: bold;
             width: 100%;
             height: 233px;
             background-color: #FFA0EA;
-            border: none;
-            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin-top: 113px;
-            padding: 0;
            }
         `;
 

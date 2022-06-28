@@ -16,6 +16,7 @@ export function initButtonComp() {
 
         style.innerHTML = `
             .root{
+                font-weight: bold;
                 font-size: 18px;
                 border:solid 2px;
                 border-radius: 4px;

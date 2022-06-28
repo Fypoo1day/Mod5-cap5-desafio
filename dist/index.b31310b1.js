@@ -524,7 +524,7 @@ parcelHelpers.export(exports, "initWelcome", ()=>initWelcome
 function initWelcome(params) {
     const div = document.createElement("div");
     div.className = "page-welcome";
-    div.innerHTML = `\n    <header-comp class="Header"></header-comp>\n\n    <div class="container">\n    <custom-text variant="title" class="welcome">\n      Te damos la bienvenida a esta página\n    </custom-text>\n\n\n    <custom-text variant="body" class="welcome">\n      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?\n    </custom-text>\n\n    <custom-text variant="subtitle" class="welcome">\n      Para continuar ingresá tu nombre\n    </custom-text>\n\n    <div>\n     <text-field label="Nombre" class="welcome"></text-field>\n    </div>\n    <div>\n      <custom-button class="start-button">Comenzar</custom-button>\n    </div>\n\n    </div>\n\n    <footer-comp></footer-comp>\n    `;
+    div.innerHTML = `\n    <header-comp class="Header"></header-comp>\n\n    <div class="container">\n      <custom-text variant="title" class="welcome">\n        Te damos la bienvenida a esta página\n      </custom-text>\n\n\n      <custom-text variant="body" class="welcome">\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?\n      </custom-text>\n\n      <custom-text variant="subtitle" class="welcome">\n        Para continuar ingresá tu nombre\n      </custom-text>\n\n      <div class="welcome">\n        <text-field label="Nombre" ></text-field>\n      </div>\n      <div style="padding: 0px 20px">\n        <custom-button class="start-button">Comenzar</custom-button>\n      </div>\n\n    </div>\n\n    <footer-comp></footer-comp>\n    `;
     const startButtonEl = div.querySelector(".start-button");
     startButtonEl?.addEventListener("click", function() {
         params.goTo("/step-1");
@@ -641,7 +641,7 @@ function initTextFieldComp() {
             });
             const div = document.createElement("div");
             const style = document.createElement("style");
-            style.innerHTML = `\n          *{\n            box-sizing: border-box;\n            }  \n          .label{\n              display:block;\n            }\n          .input{\n              font-size: 18px;\n              border:solid 2px;\n              border-radius: 4px;\n              // padding: 17px 13px;\n            }\n        `;
+            style.innerHTML = `\n          *{\n            box-sizing: border-box;\n            }  \n          .label{\n              display:block;\n            }\n          .input{\n              font-size: 18px;\n              border:solid 2px;\n              border-radius: 4px;\n               padding: 17px 13px;\n               width: 100%;\n            }\n        `;
             div.innerHTML = `\n          <label class="label">\n            <custom-text variant="body">\n              ${label}\n            </custom-text>\n          </label>\n          <input type="text" class="input" />\n        `;
             shadow.appendChild(div);
             shadow.appendChild(style);
@@ -668,7 +668,7 @@ function initButtonComp() {
             const button = document.createElement("button");
             const style = document.createElement("style");
             button.className = "root";
-            style.innerHTML = `\n            .root{\n                font-size: 18px;\n                border:solid 2px;\n                border-radius: 4px;\n                padding: 17px 13px;\n                background-color:#9CBBE9;\n                width:100%;\n            }\n          `;
+            style.innerHTML = `\n            .root{\n                font-weight: bold;\n                font-size: 18px;\n                border:solid 2px;\n                border-radius: 4px;\n                padding: 17px 13px;\n                background-color:#9CBBE9;\n                width:100%;\n            }\n          `;
             button.textContent = this.textContent;
             shadow.appendChild(button);
             shadow.appendChild(style);
@@ -695,7 +695,7 @@ function initHeader() {
             const style = document.createElement("style");
             div.className = "Header";
             div.textContent = "Header";
-            style.innerHTML = `\n        .Header{\n          width: 100%;\n          height: 60px;\n          background-color: #FF8282;\n          border: none;\n          margin: 0;\n          padding: 0;\n          margin-bottom: 41px;\n         }\n      `;
+            style.innerHTML = `\n        .Header{\n          font-family: "Roboto";\n          font-weight: bold;\n          width: 100%;\n          height: 60px;\n          background-color: #FF8282;\n          display: flex;\n          justify-content: center;\n          align-items: center;\n          margin-bottom: 41px;\n         }\n      `;
             shadow.appendChild(div);
             shadow.appendChild(style);
         }
@@ -722,7 +722,7 @@ function initFooter() {
             const style = document.createElement("style");
             footer.className = "Footer";
             footer.textContent = "Footer";
-            style.innerHTML = `\n          .Footer{\n            width: 100%;\n            height: 233px;\n            background-color: #FFA0EA;\n            border: none;\n            margin: 0;\n            margin-top: 113px;\n            padding: 0;\n           }\n        `;
+            style.innerHTML = `\n          .Footer{\n            font-family: "Roboto";\n            font-weight: bold;\n            width: 100%;\n            height: 233px;\n            background-color: #FFA0EA;\n            display: flex;\n            justify-content: center;\n            align-items: center;\n            margin-top: 113px;\n           }\n        `;
             shadow.appendChild(footer);
             shadow.appendChild(style);
         }
