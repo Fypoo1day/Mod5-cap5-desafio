@@ -16,7 +16,7 @@ export function initButtonComp() {
         button.className = variant;
 
         style.innerHTML = `
-            .start-button{
+            .start{
                 font-weight: bold;
                 font-size: 18px;
                 border:solid 2px;
@@ -26,7 +26,7 @@ export function initButtonComp() {
                 width:100%;
             }
 
-            .back-button{
+            .back{
               font-weight: bold;
               font-size: 18px;
               border:solid 2px;

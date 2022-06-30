@@ -34,7 +34,7 @@
 88C:\Users\alanp\src\repasos\05-ejercicio\node_modules\postcss-calc\src\lib\convertUnit.js132905539433750000 0
 71C:\Users\alanp\src\repasos\05-ejercicio\node_modules\lodash\toFinite.js132905539453080002 0
 86C:\Users\alanp\src\repasos\05-ejercicio\node_modules\es-abstract\2019\IteratorClose.js132990341087190000 0
-44C:\Users\alanp\src\repasos\05-ejercicio\dist133008879918050639 1
+44C:\Users\alanp\src\repasos\05-ejercicio\dist133009498713183571 1
 77C:\Users\alanp\src\repasos\05-ejercicio\node_modules\sshpk\lib\certificate.js132905539486180000 0
 77C:\Users\alanp\src\repasos\05-ejercicio\node_modules\terser\tools\terser.d.ts132995400732530000 0
 87C:\Users\alanp\src\repasos\05-ejercicio\node_modules\highlight.js\lib\languages\http.js132905539471080000 0
@@ -113,7 +113,7 @@
 76C:\Users\alanp\src\repasos\05-ejercicio\node_modules\@parcel\package-manager132997306811203512 1
 67C:\Users\alanp\src\repasos\05-ejercicio\node_modules\browserify-des132997306664765167 1
 137C:\Users\alanp\src\repasos\05-ejercicio\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\side-effects-false\package.json132905539396510000 0
-66C:\Users\alanp\src\repasos\05-ejercicio\src\pages\welcome\index.ts133008528246572860 0
+66C:\Users\alanp\src\repasos\05-ejercicio\src\pages\welcome\index.ts133009497577948500 0
 79C:\Users\alanp\src\repasos\05-ejercicio\node_modules\msgpackr-extract\README.md132990341078040000 0
 79C:\Users\alanp\src\repasos\05-ejercicio\node_modules\get-intrinsic\CHANGELOG.md132995400741060000 0
 65C:\Users\alanp\src\repasos\05-ejercicio\node_modules\loader-utils132997306819052510 1
@@ -222,7 +222,7 @@
 67C:\Users\alanp\src\repasos\05-ejercicio\node_modules\@parcel\events132997306656916155 1
 139C:\Users\alanp\src\repasos\05-ejercicio\node_modules\@parcel\fs-write-stream-atomic\node_modules\readable-stream\lib\_stream_passthrough.js132905539332490002 0
 76C:\Users\alanp\src\repasos\05-ejercicio\node_modules\is-buffer\test\basic.js132905539462830000 0
-67C:\Users\alanp\src\repasos\05-ejercicio\src\pages\thankyou\index.ts132997311885666050 0
+67C:\Users\alanp\src\repasos\05-ejercicio\src\pages\thankyou\index.ts133009498711943951 0
 82C:\Users\alanp\src\repasos\05-ejercicio\node_modules\source-map\lib\source-node.js132905539401779998 0
 90C:\Users\alanp\src\repasos\05-ejercicio\node_modules\postcss-discard-comments\src\index.js132990341078550000 0
 74C:\Users\alanp\src\repasos\05-ejercicio\node_modules\cipher-base\README.md132905539496029998 0
@@ -244,9 +244,9 @@
 103C:\Users\alanp\src\repasos\05-ejercicio\node_modules\jsdom\lib\jsdom\living\generated\HTMLCollection.js132905539461230000 0
 75C:\Users\alanp\src\repasos\05-ejercicio\node_modules\node-forge\lib\task.js132905539342900000 0
 63C:\Users\alanp\src\repasos\05-ejercicio\node_modules\cli-cursor132997306665622870 1
-70C:\Users\alanp\src\repasos\05-ejercicio\src\components\button\index.ts133008580419564329 0
+70C:\Users\alanp\src\repasos\05-ejercicio\src\components\button\index.ts133009491892626960 0
 84C:\Users\alanp\src\repasos\05-ejercicio\node_modules\core-js\actual\string\search.js132997306479260000 0
-65C:\Users\alanp\src\repasos\05-ejercicio\src\pages\step-1\index.ts133008583874518693 0
+65C:\Users\alanp\src\repasos\05-ejercicio\src\pages\step-1\index.ts133009491746265408 0
 107C:\Users\alanp\src\repasos\05-ejercicio\node_modules\jsdom\lib\jsdom\living\events\CompositionEvent-impl.js132905539461230000 0
 84C:\Users\alanp\src\repasos\05-ejercicio\node_modules\@nodelib\fs.stat\out\index.d.ts132905539393840000 0
 77C:\Users\alanp\src\repasos\05-ejercicio\node_modules\lmdb-store\dict\dict.txt132905539415810002 0
@@ -17885,6 +17885,6 @@
 67C:\Users\alanp\src\repasos\05-ejercicio\node_modules\.bin\which.cmd132997306825395570 0
 63C:\Users\alanp\src\repasos\05-ejercicio\dist\index.51311a80.css133008530078072098 0
 67C:\Users\alanp\src\repasos\05-ejercicio\dist\index.51311a80.css.map133008530078092051 0
-62C:\Users\alanp\src\repasos\05-ejercicio\dist\index.b31310b1.js133008879918010744 0
-66C:\Users\alanp\src\repasos\05-ejercicio\dist\index.b31310b1.js.map133008879918040665 0
+62C:\Users\alanp\src\repasos\05-ejercicio\dist\index.b31310b1.js133009498713103583 0
+66C:\Users\alanp\src\repasos\05-ejercicio\dist\index.b31310b1.js.map133009498713143580 0
 55C:\Users\alanp\src\repasos\05-ejercicio\dist\index.html133008518246274204 0

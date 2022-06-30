@@ -526,7 +526,7 @@ parcelHelpers.export(exports, "initWelcome", ()=>initWelcome
 function initWelcome(params) {
     const div = document.createElement("div");
     div.className = "page-welcome";
-    div.innerHTML = `\n    <header-comp class="Header"></header-comp>\n\n    <div class="container">\n      <custom-text variant="title" class="welcome">\n        Te damos la bienvenida a esta página\n      </custom-text>\n\n\n      <custom-text variant="body" class="welcome">\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?\n      </custom-text>\n\n      <custom-text variant="subtitle" class="welcome">\n        Para continuar ingresá tu nombre\n      </custom-text>\n\n      <div class="welcome">\n        <text-field label="Nombre" ></text-field>\n      </div>\n      <div style="padding: 0px 20px">\n        <custom-button class="start-button">Comenzar</custom-button>\n      </div>\n\n    </div>\n\n    <footer-comp></footer-comp>\n    `;
+    div.innerHTML = `\n    <header-comp class="Header"></header-comp>\n\n    <div class="container">\n      <custom-text variant="title" class="welcome">\n        Te damos la bienvenida a esta página\n      </custom-text>\n\n\n      <custom-text variant="body" class="welcome">\n        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam consequuntur iure voluptas quia accusantium voluptatum aspernatur provident et repudiandae quam veritatis, libero porro sit beatae laboriosam a aut consequatur quidem?\n      </custom-text>\n\n      <custom-text variant="subtitle" class="welcome">\n        Para continuar ingresá tu nombre\n      </custom-text>\n\n      <div class="welcome">\n        <text-field label="Nombre" ></text-field>\n      </div>\n      <div style="padding: 0px 20px">\n        <custom-button variant="start" class="start-button">Comenzar</custom-button>\n      </div>\n\n    </div>\n\n    <footer-comp></footer-comp>\n    `;
     const startButtonEl = div.querySelector(".start-button");
     startButtonEl?.addEventListener("click", function() {
         params.goTo("/step-1");
@@ -576,7 +576,11 @@ parcelHelpers.export(exports, "initStepOne", ()=>initStepOne
 );
 function initStepOne(params) {
     const div = document.createElement("div");
-    div.innerHTML = `\n    <header-comp class="Header"></header-comp>\n    <div class="container">\n      <custom-text variant="title" class="welcome">\n        Necesitamos algunos datos más\n      </custom-text>\n      <div class="welcome">\n        <text-field variant="one-choice" label="Email" ></text-field>\n      </div>\n      <div class="welcome">\n        <text-field variant="one-choice" label="Comida favorita" ></text-field>\n      </div>\n      <div class="welcome">\n        <text-field variant="multiple-choice" label="Alguna de estas tres opciones" ></text-field>\n      </div>\n      <div style="padding: 0px 20px">\n        <custom-button variant="start-button">Continuar</custom-button>\n      </div>\n      <div style="padding: 20px 20px;">\n        <custom-button variant="back-button">Volver</custom-button>\n      </div>\n    </div>\n    <footer-comp></footer-comp>\n    `;
+    div.innerHTML = `\n    <header-comp class="Header"></header-comp>\n    <div class="container">\n      <custom-text variant="title" class="welcome">\n        Necesitamos algunos datos más\n      </custom-text>\n      <div class="welcome">\n        <text-field label="Email" ></text-field>\n      </div>\n      <div class="welcome">\n        <text-field label="Comida favorita" ></text-field>\n      </div>\n      <div class="welcome">\n        <select-field label="Alguna de estas tres opciones" ></text-field>\n      </div>\n      <div style="padding: 0px 20px">\n        <custom-button variant="start"\n        class="start-button">Continuar</custom-button>\n      </div>\n      <div style="padding: 20px 20px;">\n        <custom-button variant="back">Volver</custom-button>\n      </div>\n    </div>\n    <footer-comp></footer-comp>\n    `;
+    const startButtonEl = div.querySelector(".start-button");
+    startButtonEl?.addEventListener("click", function() {
+        params.goTo("/thankyou");
+    });
     return div;
 }
 
@@ -587,9 +591,10 @@ parcelHelpers.export(exports, "initThankYou", ()=>initThankYou
 );
 function initThankYou(params) {
     const div = document.createElement("div");
-    div.innerHTML = `\n    <h1>Página Thank You</h1>\n    `;
-    div.addEventListener("click", ()=>{
-        params.goTo("/b");
+    div.innerHTML = `\n  <header-comp class="Header"></header-comp>\n  <div class="container">\n    <custom-text variant="title" class="welcome">\n      Gracias\n    </custom-text>\n    <custom-text variant="body" class="welcome">\n      Toda la información que nos brindaste es muy importante\n    </custom-text>\n    <div style="padding: 0px 20px">\n        <custom-button class="start-button"\n        variant="start">de nada</custom-button>\n      </div>\n  </div>\n  <footer-comp></footer-comp>\n    `;
+    const startButtonEl = div.querySelector(".start-button");
+    startButtonEl?.addEventListener("click", function() {
+        params.goTo("/welcome");
     });
     return div;
 }
@@ -667,7 +672,7 @@ function initButtonComp() {
             const button = document.createElement("button");
             const style = document.createElement("style");
             button.className = variant;
-            style.innerHTML = `\n            .start-button{\n                font-weight: bold;\n                font-size: 18px;\n                border:solid 2px;\n                border-radius: 4px;\n                padding: 17px 13px;\n                background-color:#9CBBE9;\n                width:100%;\n            }\n\n            .back-button{\n              font-weight: bold;\n              font-size: 18px;\n              border:solid 2px;\n              border-radius: 4px;\n              padding: 17px 13px;\n              background-color:#E5E5E5;\n              width:100%;\n          }\n          `;
+            style.innerHTML = `\n            .start{\n                font-weight: bold;\n                font-size: 18px;\n                border:solid 2px;\n                border-radius: 4px;\n                padding: 17px 13px;\n                background-color:#9CBBE9;\n                width:100%;\n            }\n\n            .back{\n              font-weight: bold;\n              font-size: 18px;\n              border:solid 2px;\n              border-radius: 4px;\n              padding: 17px 13px;\n              background-color:#E5E5E5;\n              width:100%;\n          }\n          `;
             button.textContent = this.textContent;
             shadow.appendChild(button);
             shadow.appendChild(style);

@@ -22,7 +22,7 @@ export function initWelcome(params) {
         <text-field label="Nombre" ></text-field>
       </div>
       <div style="padding: 0px 20px">
-        <custom-button class="start-button">Comenzar</custom-button>
+        <custom-button variant="start" class="start-button">Comenzar</custom-button>
       </div>
 
     </div>

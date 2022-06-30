@@ -7,22 +7,27 @@ export function initStepOne(params) {
         Necesitamos algunos datos más
       </custom-text>
       <div class="welcome">
-        <text-field variant="one-choice" label="Email" ></text-field>
+        <text-field label="Email" ></text-field>
       </div>
       <div class="welcome">
-        <text-field variant="one-choice" label="Comida favorita" ></text-field>
+        <text-field label="Comida favorita" ></text-field>
       </div>
       <div class="welcome">
-        <text-field variant="multiple-choice" label="Alguna de estas tres opciones" ></text-field>
+        <select-field label="Alguna de estas tres opciones" ></text-field>
       </div>
       <div style="padding: 0px 20px">
-        <custom-button variant="start-button">Continuar</custom-button>
+        <custom-button variant="start"
+        class="start-button">Continuar</custom-button>
       </div>
       <div style="padding: 20px 20px;">
-        <custom-button variant="back-button">Volver</custom-button>
+        <custom-button variant="back">Volver</custom-button>
       </div>
     </div>
     <footer-comp></footer-comp>
     `;
+  const startButtonEl = div.querySelector(".start-button");
+  startButtonEl?.addEventListener("click", function () {
+    params.goTo("/thankyou");
+  });
   return div;
 }
